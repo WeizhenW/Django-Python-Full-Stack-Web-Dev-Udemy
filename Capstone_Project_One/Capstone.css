@@ -1,0 +1,50 @@
+body{
+  background: black;
+  color: white;
+  border:80px #6fcec6 solid;
+  border-top:black;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+
+}
+
+
+
+.text{
+  font-size: 1em;
+  width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:100px;
+
+}
+
+#signup{
+  font-size: 1.5em;
+  font-weight: bold;
+
+}
+
+.regis{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+p+input{
+  width:250px;
+  height: 25px;
+
+}
+
+#sbutton{
+  margin-top:20px;
+  width:150px;
+  height: 50px;
+  background-color: orange;
+  font-size: 20px;
+  border-radius: 10px;
+
+
+
+}

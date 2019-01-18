@@ -1,0 +1,9 @@
+body{
+  text-align: center;
+  color: white;
+  background: black;
+  font-family: "Arial";
+  border: 30px #6fcec6 solid;
+  border-top:black;
+  padding-bottom: 30px
+}

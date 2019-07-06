@@ -21,7 +21,15 @@
 # arrayCheck([1, 1, 2, 1, 2, 3]) → True
 
 def arrayCheck(nums):
-    # CODE GOES HERE
+    for i in range(len(nums)-2):
+        if(nums[i] == 1 and nums[i+1] == 2 and nums [i+2] == 3):
+            return True
+    return False
+
+num_list = [1, 1, 2, 1, 2, 3]
+print(arrayCheck(num_list))
+
+
 
 
 #####################
@@ -38,8 +46,13 @@ def arrayCheck(nums):
 # stringBits('Heeololeo') → 'Hello'
 
 def stringBits(str):
-  # CODE GOES HERE
+    new_str = ''
+    for i in range(0, len(str), 2):
+        new_str = new_str + str[i]
+    return new_str
 
+string = 'Heeololeo'
+print(stringBits(string))
 
 #####################
 ## -- PROBLEM 3 -- ##
@@ -59,6 +72,23 @@ def stringBits(str):
 
 
 def end_other(a, b):
+    if(len(a) >= len(b)):
+        long_str = a
+        short_str = b
+    else:
+        long_str = b
+        short_str = a
+    for i in range(0, len(short_str)):
+        if short_str[i].upper() != long_str[i + len(long_str) - len(short_str)].upper():
+            return False
+    return True
+
+a = 'abc'
+b = 'abXabc'
+print(end_other(a, b))
+
+
+
   # CODE GOES HERE
 
 #####################
@@ -73,7 +103,13 @@ def end_other(a, b):
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
 def doubleChar(str):
-  # CODE GOES HERE
+    double_str = ''
+    for i in range(len(str)):
+        double_str = double_str + str[i] + str[i]
+    return double_str
+
+string = 'The'
+print(doubleChar(string))
 
 
 #####################
@@ -98,10 +134,17 @@ def doubleChar(str):
 # no_teen_sum(2, 1, 14) → 3
 
 def no_teen_sum(a, b, c):
+    return fix_teen(a) + fix_teen(b) + fix_teen(c)
   # CODE GOES HERE
 def fix_teen(n):
-  # CODE GOES HERE
+    if n in range(13, 20):
+        if(n == 15 or n == 16):
+            return n
+        else:
+            return 0
+    return n
 
+print(no_teen_sum(2,15,1))
 #####################
 ## -- PROBLEM 6 -- ##
 #####################
@@ -115,4 +158,11 @@ def fix_teen(n):
 # count_evens([1, 3, 5]) → 0
 
 def count_evens(nums):
+    counter = 0
+    for i in range(len(nums)):
+        if nums[i] % 2 == 0:
+            counter = counter + 1
+    return counter
+
+print(count_evens([1, 3, 5]))
   # CODE GOES HERE
